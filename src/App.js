@@ -8,6 +8,8 @@ function App() {
      <Person></Person>
      <Person></Person>
      <Person></Person>
+     <h5 style={{backgroundColor:'red',color:'#fff',padding:'20px', margin:'20px'}}> New Component : YAY</h5>
+     <Friend></Friend>
     </div>
   );
 }
@@ -20,6 +22,16 @@ function Person(){
       <p>Profession : Crecketer</p>
     </div>
   </>
+  )
+}
+
+
+function Friend(){
+  return (
+    <div className='friend'>
+      <h3>Name : Aayat</h3>
+      <p>Profession : Baby</p>
+    </div>
   )
 }
 
