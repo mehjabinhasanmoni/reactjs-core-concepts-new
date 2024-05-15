@@ -1,12 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
 
+const singers = [
+  {name: 'DR.Mahfuz', job: 'Singer' },
+  {name: 'Eva Rahman', job: 'Singer' },
+  {name: 'Agun', job: 'Singer' },
+  {name: 'Shuvro Dev', job: 'Singer' },
+]
+
 function App() {
+  const nayoks = ['Rubel', 'BappaRaz','Kuber', 'Manna'];
   return (
     <div className="App">
-     <Person name="Rubel" nayika="Mowsumi"></Person>
+      { 
+        nayoks.map(nayok => <li>{nayok}</li>)
+      }
+      {/* {
+        nayoks.map(nayok => <Person name={nayok}></Person>)
+      } */}
+
+      {
+        singers.map(singer => <Person name={singer.name}></Person>)
+      }
+
+     {/* <Person name="Rubel" nayika="Mowsumi"></Person>
      <Person name="BappaRaz"></Person>
-     <Person></Person>
+     <Person></Person> */}
      <h5 style={{backgroundColor:'red',color:'#fff',padding:'20px', margin:'20px'}}> New Component : YAY</h5>
      <Friend name="Rajib"></Friend>
     </div>
@@ -18,9 +37,8 @@ function Person(props){
   console.log(props);
   return ( <> 
     <div className='person'> 
-      <h1>Sakib AL Hasan with {props.name}</h1>
-      <p>Profession : Crecketer</p>
-      <p>Nayika : {props.nayika}</p>
+      <h1>{props.name}</h1>
+      <p>{props.nayika}</p>
     </div>
   </>
   )
