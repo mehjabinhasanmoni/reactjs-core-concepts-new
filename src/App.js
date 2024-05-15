@@ -4,9 +4,8 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-     <Person></Person>
-     <Person></Person>
-     <Person></Person>
+     <Person name="Rubel" nayika="Mowsumi"></Person>
+     <Person name="BappaRaz"></Person>
      <Person></Person>
      <h5 style={{backgroundColor:'red',color:'#fff',padding:'20px', margin:'20px'}}> New Component : YAY</h5>
      <Friend></Friend>
@@ -15,11 +14,13 @@ function App() {
 }
 
 
-function Person(){
+function Person(props){
+  console.log(props);
   return ( <> 
     <div className='person'> 
-      <h1>Sakib AL Hasan</h1>
+      <h1>Sakib AL Hasan with {props.name}</h1>
       <p>Profession : Crecketer</p>
+      <p>Nayika : {props.nayika}</p>
     </div>
   </>
   )
